@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 
-function BlockTable({blocks, setToggleStatus, getTransaction}) {
+function BlockTable({blocks,setToggleStatus,getTransaction}) {
     console.log(blocks);
     const blocksRow = []
-    
+    const [buttonState, setButtonState] = useState();
+
     blocks.forEach((element,index) => {
       blocksRow.push(<tr key={element.hash}>
         <td> 
           <input type='radio'
             id="toggle-check"
             name="radio1"
+            checked={buttonState==index}
             onClick={(e) => {
-              console.log('e', e.target.checked);
-              setToggleStatus((prev) => !prev);
+              setButtonState(prev => prev === index? null: index)
+              setToggleStatus(prev => !prev);
               getTransaction(blocks[index].hash);
             }
           }

@@ -6,13 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function NavbarCust() {
   return (
-    <Navbar bg="transparent" expand="lg">
+    <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand  href="/">Block Explorer</Navbar.Brand>
+        <Navbar.Brand href="/">Block Explorer</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll

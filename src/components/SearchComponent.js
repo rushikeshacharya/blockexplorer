@@ -23,11 +23,10 @@ function handleSearch(event) {
 
 return (
 <div>
-    <Form.Label htmlFor="inputPassword">Transaction Hash</Form.Label>
+    <Form.Label htmlFor="inputPassword5">Transaction Hash</Form.Label>
     <Form.Control
     type="text"
     id="transactionHash"
-    placeholder='Enter the transaction hash...'
     aria-describedby="transactionHashInp"
     onChange={e => setHash(e.target.value)}
     />
